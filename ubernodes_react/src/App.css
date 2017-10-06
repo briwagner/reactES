@@ -27,6 +27,7 @@
   margin: 0;
   font-style: italic;
 }
+
 .ubernodes > div {
   display: block;
   width: 100%;
@@ -65,15 +66,33 @@ p.uber-date {
 }
 
 .shorty {
-  height: 40px;
+  background-color: #efefef;
+  color: navy;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  opacity: 0;
+  height: 0;
+  transition: opacity 1200ms ease, height 1000ms ease;
 }
 
-/* .shorty:before {
-  content: "";
+.inactive .shorty {
+  opacity: 0;
+  height: 0;
+}
+
+.inactive .shorty > div {
+  display: none;
+}
+
+.active .shorty {
+  opacity: 1;
+  height: auto;
+}
+
+.active .shorty > div {
   display: block;
-  height: 20px;
-  background-color: yellow;
-} */
+}
 
 @media only screen and (min-width: 1024px) {
   .ubernodes > div {
@@ -83,5 +102,9 @@ p.uber-date {
 
   .node {
     height: 100px;
+  }
+
+  .node.active {
+    height: auto;
   }
 }

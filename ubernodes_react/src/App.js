@@ -65,7 +65,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Ubernodes</h1>
+        <h1>News</h1>
         <h6 className="uber-count">Found {this.state.nodeCount} </h6>
         <div className="ubernodes">
           {this.state.nodes.map((item, i) => {

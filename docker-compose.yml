@@ -1,0 +1,26 @@
+version: '2.1'
+services:
+  ns_elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.6.2
+    container_name: ns_elastic
+    ports:
+      - 9200:9200
+    networks:
+      - connector
+    environment:
+      - xpack.security.enabled=false
+      - http.cors.enabled=true
+      - http.cors.allow-origin=*
+
+  ns_nginx:
+    image: nginx
+    container_name: ns_nginx
+    ports:
+      - 8899:80
+    networks:
+      - connector
+    volumes:
+      - ./ubernodes_react/build:/usr/share/nginx/html
+
+networks:
+  connector:

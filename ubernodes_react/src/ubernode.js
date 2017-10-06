@@ -16,13 +16,18 @@ import {UberImage} from './uberimage';
     //   this.setState({expanded: true})
     // }
 
+    filterTease(input, limit) {
+      let dots = input.length > limit ? ' ...' : ''; 
+      return input.slice(0, limit) + dots;
+    }
+
     render() {
       return(
       <div className="node" >
-        <h4>{this.props.title} - {this.props.type}</h4>
-        <p><em>Published: {this.props.date}</em></p>
-        <p>{this.props.leader}</p>
         <UberImage imageArray={this.props.imageArray} imageTitle={this.props.title} />
+        <h4>{this.props.title} - {this.props.type}</h4>
+        <p className="uber-date">Published: {this.props.date}</p>
+        <p>{this.filterTease(this.props.leader, 200)}</p>
         {/* <div className="shorty" dangerouslySetInnerHTML={{__html: this.props.body}}></div> */}
       </div>
       ) 

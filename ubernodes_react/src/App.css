@@ -23,23 +23,45 @@
   to { transform: rotate(360deg); }
 }
 
+.uber-count {
+  margin: 0;
+  font-style: italic;
+}
 .ubernodes > div {
-  display: inline-block;
-  width: 50%;
+  display: block;
+  width: 100%;
   vertical-align: top;
 }
+
 .node {
+  height: auto;
   border: 1px solid navajowhite;
+  border-radius: 5px;
   margin: 10px 5px;
-  padding: 0 15px;
+  padding: 15px;
   background-color: navy;
   color: white;
-  border-radius: 5px;
 }
 
-.node img {
-  max-width: 100%;
-  padding-bottom: 15px;
+.node h4 {
+  margin: 0 5px;
+}
+
+.node p {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+p.uber-date {
+  font-size: 80%;
+  font-style: italic;
+  margin: 0;
+  padding: 2px;
+}
+
+.uber-image {
+  float: left;
+  margin: 0 15px 15px;
 }
 
 .shorty {
@@ -52,3 +74,14 @@
   height: 20px;
   background-color: yellow;
 } */
+
+@media only screen and (min-width: 1024px) {
+  .ubernodes > div {
+    width: 50%;
+    display: inline-block;
+  }
+
+  .node {
+    height: 100px;
+  }
+}

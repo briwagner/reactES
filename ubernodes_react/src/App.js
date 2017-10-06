@@ -37,7 +37,7 @@ class App extends Component {
   fetchNodes() {
     let query = {
       "from" : 0,
-      "size" : 25,
+      "size" : 24,
       "query" : {
         "term" : {
           "ubernodeType" : "feature"
@@ -66,7 +66,7 @@ class App extends Component {
     return (
       <div>
         <h1>Ubernodes</h1>
-        <h3>Found {this.state.nodeCount} </h3>
+        <h6 className="uber-count">Found {this.state.nodeCount} </h6>
         <div className="ubernodes">
           {this.state.nodes.map((item, i) => {
             return (

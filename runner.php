@@ -9,7 +9,7 @@ use GuzzleHttp\Client;
 
 // Commands to run search.
 $page = new PortalPage();
-$page->search(128);
+$page->search(48);
 
 $fullNodes = $page->buildResults();
 foreach($fullNodes as $node) {

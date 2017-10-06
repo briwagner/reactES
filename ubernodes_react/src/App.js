@@ -45,7 +45,10 @@ class App extends Component {
       }
     };
     return fetch('http://localhost:9200/ubernodes/ubernode/_search', 
-      {method: 'POST', body: JSON.stringify(query)}
+      {
+        method: 'POST',
+        body: JSON.stringify(query)
+      }
     ).then(function(resp) {
         return resp.json();
       })

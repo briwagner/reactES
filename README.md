@@ -8,12 +8,7 @@ This includes three components:
   
 Setup:
   - composer install
-  - cd ubernodes_react; npm install
-  - launch a local Elasticsearch instance on port 9200
+  - cd ubernodes_react; npm install; npm run-script build
 
 Run
-From the command line, run 'php runner.php' to fetch data from the api and seed the local Elasticsearch. 
-From the ubernodes_react directory, 'npm start' to launch a server for the React app.
-
-To do:
-  - move to Docker containers to simplify setup, operation 
+From the command line, run 'php runner.php' to fetch data from the api and seed the local Elasticsearch.

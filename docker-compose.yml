@@ -16,7 +16,7 @@ services:
     image: nginx
     container_name: ns_nginx
     ports:
-      - 8899:80
+      - 4200:80
     networks:
       - connector
     volumes:
